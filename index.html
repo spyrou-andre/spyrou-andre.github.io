@@ -24,12 +24,12 @@
 		<meta property="og:url" content="https://spyrou-andre.github.io/" />
 		<meta property="og:image" content="images/thumbs/Portfolio_share1.jpg" />
 		<meta property="og:description" content="View my latest data analysis projects on my portfolio page." /-->	
-		<meta property="og:title1" content="Digital Campaigns Analysis" />
-		<meta property="og:image1" content="images/thumbs/ads2.jpg" />
-		<meta property="og:title2" content="ARIMA Gold Price Prediction" />
-		<meta property="og:image2" content="images/thumbs/Gold.jpg" />
-		<meta property="og:title3" content="Housing Prices in Cyprus" />
-		<meta property="og:image3" content="images/thumbs/HousePrices.jpg" />
+		<meta property="og:title" content="Digital Campaigns Analysis" />
+		<meta property="og:image" content="images/thumbs/ads2.jpg" />
+		<meta property="og:title" content="ARIMA Gold Price Prediction" />
+		<meta property="og:image" content="images/thumbs/Gold.jpg" />
+		<meta property="og:title" content="Housing Prices in Cyprus" />
+		<meta property="og:image" content="images/thumbs/HousePrices.jpg" />
 
 
 		<link rel="stylesheet" href="assets/css/main.css" >
@@ -123,9 +123,23 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				function generateLink(link, title, image) {
-				  var shareLink = "https://spyrou-andre.github.io/?link=" + encodeURIComponent(link) + "&title=" + encodeURIComponent(title) + "&image=" + encodeURIComponent(image);
-				  prompt("Copy and paste the following link:", shareLink);
+			<script>
+				function generateLink(url, title, image) {
+				const encodedUrl = encodeURIComponent(url);
+				const encodedTitle = encodeURIComponent(title);
+				const encodedImage = encodeURIComponent(image);
+				const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&title=${encodedTitle}&picture=${encodedImage}`;
+
+				const linkInput = document.createElement('input');
+				linkInput.setAttribute('type', 'text');
+				linkInput.setAttribute('value', shareUrl);
+				document.body.appendChild(linkInput);
+				linkInput.select();
+				document.execCommand('copy');
+				document.body.removeChild(linkInput);
+
+				alert('Link copied to clipboard!');
+				return shareUrl;
 				}
 			  </script>
 			
