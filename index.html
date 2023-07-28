@@ -7,21 +7,16 @@
 <html>
 	<head>
 	    <!-- Custom CSS for Tableau link -->
-	    <style>
-	        /* Remove underline from the link */
-	        #footer a {
-	            text-decoration: none;
-	        }
-	
-	        /* Set the link color to grey */
-	        #footer a {
-	            color: #888;
-	        }
-	
-	        /* Change link color to green on hover */
-	        #footer a:hover {
-	            color: #4CAF50;
-	        }
+            <style>
+    		/* Custom styling for Tableau Public link */
+    		.tableau-link {
+	        text-decoration: none;
+	        color: grey;
+		}
+		
+		.tableau-link:hover {
+		color: green;
+		}
 	    </style>
 		
 		<!-- Google tag (gtag.js) -->
@@ -108,7 +103,8 @@
 						<!--li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li-->
 					</ul>
 					<!--<p><a href="https://public.tableau.com/app/profile/andreas.spyrou">Tableau Public</a></p>-->
-					<p style="text-decoration: none; color: grey;"><a href="https://public.tableau.com/app/profile/andreas.spyrou">Tableau Public</a></p>
+					<li><a href="https://public.tableau.com/app/profile/andreas.spyrou" class="tableau-link">Tableau Public</a></li>
+					<!--<p style="text-decoration: none; color: grey;"><a href="https://public.tableau.com/app/profile/andreas.spyrou">Tableau Public</a></p>-->
 
 					<!--ul class="copyright">
 						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li-->
